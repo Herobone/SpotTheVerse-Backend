@@ -45,7 +45,7 @@ Resources:
     Type: AWS::Serverless::LayerVersion
     Properties:
       LayerName: spottheverse-python-libs
-      Description: Dependencies for SpotTheVerse Backend
+      Description: Python Dependencies for SpotTheVerse Backend
       ContentUri: package/.
       CompatibleRuntimes:
         - python3.7
