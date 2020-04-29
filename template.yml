@@ -29,7 +29,7 @@ Resources:
     Properties:
       FunctionName: !Sub 'awscodestar-${ProjectId}-lambda-STV'
       CodeUri: src/
-      Handler: index.app
+      Handler: index.handler
       Runtime: python3.7
       Role:
         Fn::GetAtt:
@@ -41,11 +41,14 @@ Resources:
           Properties:
             Path: /
             Method: get
-        ListStudents:
-          Type: Api
-          Properties:
-            Path: /students
-            Method: get
+  libs:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: spottheverse-python-libs
+      Description: Dependencies for SpotTheVerse Backend
+      ContentUri: package/.
+      CompatibleRuntimes:
+        - python3.7
   LambdaExecutionRole:
     Description: Creating service role in IAM for AWS Lambda
     Type: AWS::IAM::Role
