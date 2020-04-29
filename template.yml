@@ -24,10 +24,10 @@ Globals:
       Role: !Ref CodeDeployRole
 
 Resources:
-  HelloWorld:
+  STV:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: !Sub 'awscodestar-${ProjectId}-lambda'
+      FunctionName: !Sub 'awscodestar-${ProjectId}-lambda-STV'
       CodeUri: src/
       Handler: index.app
       Runtime: python3.8
