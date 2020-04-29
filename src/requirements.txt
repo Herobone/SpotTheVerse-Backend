@@ -1,4 +1,5 @@
 requests
 flask-lambda-python36
+flask
 numpy
 bs4
