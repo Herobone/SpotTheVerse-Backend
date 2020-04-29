@@ -1,0 +1,4 @@
+requests
+flask-lambda-python36
+numpy
+bs4
