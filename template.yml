@@ -36,7 +36,7 @@ Resources:
         - LambdaExecutionRole
         - Arn
       Layers:
-        - !Ref libs
+        - arn:aws:lambda:eu-central-1:543143946998:layer:Dependencioes:1
       Events:
         AnalysePlaylistWID:
           Type: Api
@@ -63,20 +63,6 @@ Resources:
           Properties:
             Path: /
             Method: get
-  libs:
-    Type: AWS::Serverless::LayerVersion
-    Properties:
-      LayerName: spottheverse-python-libs
-      Description: Python Dependencies for SpotTheVerse Backend
-      ContentUri: package/.
-      CompatibleRuntimes:
-        - python3.8
-  libsPerms:
-    Type: AWS::Lambda::LayerVersionPermission
-    Properties: 
-      Action: lambda:PublishLayerVersion
-      LayerVersionArn: !Ref libs
-      Principal: !Sub 'arn:${AWS::Partition}:iam::${AWS::AccountId}:root'
   LambdaExecutionRole:
     Description: Creating service role in IAM for AWS Lambda
     Type: AWS::IAM::Role
