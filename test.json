@@ -1,98 +1,94 @@
 {
-    "httpMethod": "GET",
-    "body": null,
-    "resource": "/analyse/{id}",
-    "requestContext": {
-        "resourceId": "123456",
-        "apiId": "1234567890",
-        "resourcePath": "/analyse/{id}",
-        "httpMethod": "GET",
-        "requestId": "c6af9ac6-7b61-11e6-9a41-93e8deadbeef",
-        "accountId": "123456789012",
-        "stage": "Prod",
-        "identity": {
-            "apiKey": null,
-            "userArn": null,
-            "cognitoAuthenticationType": null,
-            "caller": null,
-            "userAgent": "Custom User Agent String",
-            "user": null,
-            "cognitoIdentityPoolId": null,
-            "cognitoAuthenticationProvider": null,
-            "sourceIp": "127.0.0.1",
-            "accountId": null
-        },
-        "extendedRequestId": null,
-        "path": "/analyse/{id}"
-    },
-    "queryStringParameters": {
-        "help": "yes"
-    },
-    "multiValueQueryStringParameters": {
-        "help": [
-            "yes"
-        ]
-    },
+    "body": "{\"some\": \"val\"}",
     "headers": {
-        "Host": "127.0.0.1:3000",
-        "Connection": "keep-alive",
-        "Upgrade-Insecure-Requests": "1",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-        "Sec-Fetch-Site": "none",
-        "Sec-Fetch-Mode": "navigate",
-        "Sec-Fetch-User": "?1",
-        "Sec-Fetch-Dest": "document",
+        "Accept": "*/*",
         "Accept-Encoding": "gzip, deflate, br",
-        "Accept-Language": "en-US,en;q=0.9,de;q=0.8,la;q=0.7",
-        "X-Forwarded-Proto": "http",
-        "X-Forwarded-Port": "3000"
+        "Connection": "keep-alive",
+        "Content-Length": "15",
+        "Content-Type": "application/json",
+        "Host": "127.0.0.1:3000",
+        "Postman-Token": "a15d3f6b-ec53-404c-b158-8b052a53ae41",
+        "Token": "BQDYtkdOKcTjX2eJFwNNQlJ9r8hQG9669wl_5teHO19U8kDHQJe1cv3pK7mJJiHYCemoWc9F1dBwHV0doLTB7CojGsxibcpTc_eIYtUa3we6C2-950fagXIDlpSiI3P9i8w6oa4BdPfCH04J3aIroyKLhp4456vs1XFlimwGdusf2FtCrh5fr3txVpxbkZw9A47uUmRLCLhhk03oLYuXvEybB4BSYDMX84ok_X3nBacIBnAUG0QRc1CpZrkkoR2KL5CZouffNNw7YmxpXzSq",
+        "User-Agent": "PostmanRuntime/7.24.1",
+        "X-Forwarded-Port": "3000",
+        "X-Forwarded-Proto": "http"
     },
+    "httpMethod": "POST",
+    "isBase64Encoded": false,
     "multiValueHeaders": {
-        "Host": [
-            "127.0.0.1:3000"
-        ],
-        "Connection": [
-            "keep-alive"
-        ],
-        "Upgrade-Insecure-Requests": [
-            "1"
-        ],
-        "User-Agent": [
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36"
-        ],
         "Accept": [
-            "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
-        ],
-        "Sec-Fetch-Site": [
-            "none"
-        ],
-        "Sec-Fetch-Mode": [
-            "navigate"
-        ],
-        "Sec-Fetch-User": [
-            "?1"
-        ],
-        "Sec-Fetch-Dest": [
-            "document"
+            "*/*"
         ],
         "Accept-Encoding": [
             "gzip, deflate, br"
         ],
-        "Accept-Language": [
-            "en-US,en;q=0.9,de;q=0.8,la;q=0.7"
+        "Connection": [
+            "keep-alive"
         ],
-        "X-Forwarded-Proto": [
-            "http"
+        "Content-Length": [
+            "15"
+        ],
+        "Content-Type": [
+            "application/json"
+        ],
+        "Host": [
+            "127.0.0.1:3000"
+        ],
+        "Postman-Token": [
+            "a15d3f6b-ec53-404c-b158-8b052a53ae41"
+        ],
+        "Token": [
+            "BQDYtkdOKcTjX2eJFwNNQlJ9r8hQG9669wl_5teHO19U8kDHQJe1cv3pK7mJJiHYCemoWc9F1dBwHV0doLTB7CojGsxibcpTc_eIYtUa3we6C2-950fagXIDlpSiI3P9i8w6oa4BdPfCH04J3aIroyKLhp4456vs1XFlimwGdusf2FtCrh5fr3txVpxbkZw9A47uUmRLCLhhk03oLYuXvEybB4BSYDMX84ok_X3nBacIBnAUG0QRc1CpZrkkoR2KL5CZouffNNw7YmxpXzSq"
+        ],
+        "User-Agent": [
+            "PostmanRuntime/7.24.1"
         ],
         "X-Forwarded-Port": [
             "3000"
+        ],
+        "X-Forwarded-Proto": [
+            "http"
         ]
     },
-    "pathParameters": {
-        "id": "blafaseldingdong"
+    "multiValueQueryStringParameters": {
+        "nice": [
+            "true"
+        ],
+        "yes": [
+            "no"
+        ]
     },
-    "stageVariables": null,
-    "path": "/analyse/blafaseldingdong",
-    "isBase64Encoded": false
+    "path": "/analyse/fucktheplaylist",
+    "pathParameters": {
+        "id": "fucktheplaylist"
+    },
+    "queryStringParameters": {
+        "nice": "true",
+        "yes": "no"
+    },
+    "requestContext": {
+        "accountId": "123456789012",
+        "apiId": "1234567890",
+        "extendedRequestId": null,
+        "httpMethod": "POST",
+        "identity": {
+            "accountId": null,
+            "apiKey": null,
+            "caller": null,
+            "cognitoAuthenticationProvider": null,
+            "cognitoAuthenticationType": null,
+            "cognitoIdentityPoolId": null,
+            "sourceIp": "127.0.0.1",
+            "user": null,
+            "userAgent": "Custom User Agent String",
+            "userArn": null
+        },
+        "path": "/analyse/{id}",
+        "requestId": "c6af9ac6-7b61-11e6-9a41-93e8deadbeef",
+        "resourceId": "123456",
+        "resourcePath": "/analyse/{id}",
+        "stage": "Prod"
+    },
+    "resource": "/analyse/{id}",
+    "stageVariables": null
 }
