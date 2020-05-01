@@ -29,7 +29,7 @@ Resources:
     Properties:
       FunctionName: !Sub 'awscodestar-${ProjectId}-lambda-STV'
       CodeUri: src/
-      Handler: index.handler
+      Handler: othertest.proc
       Runtime: python3.8
       Role:
         Fn::GetAtt:
@@ -69,6 +69,12 @@ Resources:
       ContentUri: package/.
       CompatibleRuntimes:
         - python3.8
+  libsPerms:
+    Type: AWS::Lambda::LayerVersionPermission
+    Properties: 
+      Action: lambda:PublishLayerVersion
+      LayerVersionArn: !Ref libs
+      Principal: !Sub 'arn:${AWS::Partition}:iam::${AWS::AccountId}:role/CodeStarWorker-${ProjectId}-CloudFormation'
   LambdaExecutionRole:
     Description: Creating service role in IAM for AWS Lambda
     Type: AWS::IAM::Role
