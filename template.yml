@@ -35,8 +35,6 @@ Resources:
         Fn::GetAtt:
         - LambdaExecutionRole
         - Arn
-      Layers:
-        - arn:aws:lambda:eu-central-1:543143946998:layer:Dependencioes:1
       Events:
         AnalysePlaylistWID:
           Type: Api
