@@ -74,7 +74,7 @@ Resources:
     Properties: 
       Action: lambda:PublishLayerVersion
       LayerVersionArn: !Ref libs
-      Principal: '*'
+      Principal: arn:aws:sts::543143946998:assumed-role/CodeStarWorker-spottheversebck-CloudFormation/AWSCloudFormation
   LambdaExecutionRole:
     Description: Creating service role in IAM for AWS Lambda
     Type: AWS::IAM::Role
