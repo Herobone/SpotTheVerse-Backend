@@ -35,6 +35,8 @@ Resources:
         Fn::GetAtt:
         - LambdaExecutionRole
         - Arn
+      Layers:
+        - !Ref libs
       Events:
         AnalysePlaylistWID:
           Type: Api
@@ -74,7 +76,7 @@ Resources:
     Properties: 
       Action: lambda:PublishLayerVersion
       LayerVersionArn: !Ref libs
-      Principal: arn:aws:sts::543143946998:assumed-role/CodeStarWorker-spottheversebck-CloudFormation/AWSCloudFormation
+      Principal: !Sub 'arn:${AWS::Partition}:iam::${AWS::AccountId}:root'
   LambdaExecutionRole:
     Description: Creating service role in IAM for AWS Lambda
     Type: AWS::IAM::Role
